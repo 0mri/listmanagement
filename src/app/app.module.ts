@@ -24,11 +24,12 @@ import { MycampaignsModule } from './mycampaigns/mycampaigns.module';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     BrowserAnimationsModule,
+    CampaignscheduleModule,
     AppRoutingModule,
     ListmngmntModule,
     NewcampaignModule,
     MycampaignsModule,
-    CampaignscheduleModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
