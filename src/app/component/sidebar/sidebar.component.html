@@ -1,0 +1,35 @@
+<div class="nav-left-sidebar" style="z-index: 1;">
+  <div class="menu-list">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav flex-column">
+          <li class="nav-item ">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['listmanage']"><i class="fas fa-list-alt"></i>List Managment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2"
+              aria-controls="submenu-2"><i class="fas fa-seedling"></i>Campaigns</a>
+            <div id="submenu-2" class="collapse submenu" style="">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['campaigns/new']">Start New Campaign</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['campaigns/my']">My Campaigns</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLinkActive="active" [routerLink]="['campaigns/schedule']">Campaigns Schedule</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

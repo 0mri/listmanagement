@@ -1,0 +1,92 @@
+<app-sidebar></app-sidebar>
+<div class="main-content container-fluid p-0">
+  <div class="email-filters pl-4">
+    <div class="email-filters-left ml-3 p-2">
+      <div class="btn-group">
+        <div class="mb-0 mr-4 mt-3 legend-item">
+          <span class="fa-xs text-primary mr-1 legend-title "><i class="fa fa-fw fa-square-full"></i></span>
+          <span class="legend-text">Campaign not started yet</span></div>
+      </div>
+      <div class="btn-group">
+        <div class="mb-0 mt-3 mr-4  legend-item">
+          <span class="fa-xs text-warning mr-1 legend-title "><i class="fa fa-fw fa-square-full"></i></span>
+          <span class="legend-text">Campaign in progress</span></div>
+      </div>
+      <div class="btn-group">
+        <div class="mb-0 mt-3 mr-4  legend-item">
+          <span class="fa-xs text-success mr-1 legend-title "><i class="fa fa-fw fa-square-full"></i></span>
+          <span class="legend-text">Completed Campaign</span></div>
+      </div>
+    </div>
+    <!--<div class="email-filters-right">
+        <div class="btn-group email-pagination-nav">
+          <button class="btn btn-light" type="button" disabled><i class="fas fa-angle-left"></i></button>
+          <button class="btn btn-light" type="button" disabled><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div> -->
+  </div>
+  <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5" style="float: none; margin: 0 auto;">
+                      <div class="card text-center" >
+                          <div class="card-body">
+                              <h3 class="card-title  border-bottom pb-2 ">You have not started a campaign yet</h3>
+                              <a href="newcampaign.php" class="btn btn-brand">Start Your First Campaign!</a>
+                          </div>
+                      </div>
+                  </div> -->
+  <div class="accrodion-regular">
+    <div id="">
+      <div class="card mb-0" style="border-radius: unset; z-index: 0;">
+        <div class="card-header" id="">
+          <div class="dropdown ml-auto" style="float: right;">
+            <a class="toolbar" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"> <i class="mdi mdi-dots-vertical"></i> </a>
+            <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="dropdownMenuLink"
+              x-placement="bottom-end"
+              style="position: absolute; transform: translate3d(18px, 23px, 0px); top: 0px; left: 0px; will-change: transform;">
+              <a class="dropdown-item pt-2 pb-2" href="#">Delete</a>
+              <a class="dropdown-item pt-2 pb-2" href="#">Pause</a>
+              <a class="dropdown-item pt-2 pb-2" href="#">Resume</a>
+            </div>
+          </div>
+          <h5 class="mb-0 pl-2">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse' . $row['camID'] . '"
+              aria-expanded="false" aria-controls="collapse' .
+      $row['camID'] . '">
+              <span class="fas mr-3 fa-angle-down"></span><span class="badge-dot ' .
+      $prog['color'] . ' mr-2"></span> ' . $row['campName'] . '
+            </button>
+
+          </h5>
+
+        </div>
+        <div id="collapse' . $row['camID'] . '" class="collapse" aria-labelledby="heading' .
+      $row['camID'] . '" data-parent="">
+          <div class="card-body pb-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex"><strong class="mr-2">'
+                  .$prog['text'].'</strong> <span>' . $strtdate . '</span></li>';
+              <li class="list-group-item d-flex"><strong class="mr-2">End Date: </strong>
+                <span>' . $enddate . '</span></li>
+              <li class="list-group-item d-flex"><strong class="mr-2">Mails Sent: </strong>
+                <span class="badge badge-success badge-pill">'.$row['mailSent'].'</span></li>
+              <li class="list-group-item d-flex"><strong class="mr-2">Remaining Mails: </strong>
+                <span class="badge badge-primary badge-pill">'.($total-$sent).'</span></li>
+              <li class="list-group-item d-flex"><strong class="mr-2">Mails Failed: </strong>
+                <span class="badge badge-danger badge-pill">'.$row['mailFailed'].'</span></li>
+              <li class="list-group-item d-flex">
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar ' . $prog['animated'] . ' progress-bar-striped ' . $prog['color'] . '"
+                      role="progressbar" style="width: 50%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">' . $prog['val'] . '%</div>
+                                      </div>
+                                  </div></li>' ;} echo '</ul>
+                                  </div>
+                                  <div class="modal-footer text-center" style="display:block">
+                                      <a href="dd" class="btn btn-outline-dark">Message Details</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+    </div>
+  </div>

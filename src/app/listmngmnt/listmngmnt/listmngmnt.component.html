@@ -1,0 +1,108 @@
+<div class="dashboard-ecommerce">
+
+  <div class=" dashboard-content ">
+    <!-- ============================================================== -->
+    <!-- pageheader  -->
+    <!-- ============================================================== -->
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+          <h2 class="pageheader-title">List Management</h2>
+          <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis
+            faucibus at enim quis massa lobortis rutrum.</p>
+          <div class="page-breadcrumb">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.php" class="breadcrumb-link">List Management</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- ============================================================== -->
+      <!-- subscribers lists  -->
+      <!-- ============================================================== -->
+      <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+        <app-subs></app-subs>
+        <!-- ============================================================== -->
+        <!-- target links  -->
+        <!-- ============================================================== -->
+        <div class="card">
+          <h5 class="card-header">Target Links</h5>
+          <div class="card-header">
+            <form action="query/addlink.php" method="POST">
+              <div class="input-group">
+                <input type="text" name="data" class="form-control" required>
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Target</th>
+                  <th scope="col">link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>name</th>
+                  <td id="'.$row['linkID'].'">link</td>
+                  <td>
+                    <a onclick="" class="btn btn-sm btn-outline-light" data-toggle="tooltip" data-placement="top"
+                      title="" data-original-title="Copy link"><i class="fas fa-clone"></i></a>
+                    <a class="btn btn-sm btn-outline-light" data-toggle="tooltip" data-placement="top" title=""
+                      data-original-title="Delete"><i class="far fa-trash-alt"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end target links  -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- end subscribers lists  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- pie chart  -->
+      <!-- ============================================================== -->
+      <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+          <h5 class="card-header">Subscribers Distribution</h5>
+          <div class="card-body">
+            <canvas id="chartjs_pie"></canvas>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- simple line chart  -->
+        <!-- ============================================================== -->
+        <div class="card">
+          <h5 class="card-header">Total Subscribers</h5>
+          <div class="card-body">
+            <canvas id="revenue"></canvas>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end simple line chart  -->
+        <!-- ============================================================== -->
+        <div class="card">
+          <h5 class="card-header">World Map</h5>
+          <div class="card-body">
+            <div id="world-map-markers" style="height: 400px;"></div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- end Subscribers Distribution  -->
+      <!-- ============================================================== -->
+    </div>
+  </div>
+</div>

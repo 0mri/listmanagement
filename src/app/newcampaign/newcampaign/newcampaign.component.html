@@ -1,0 +1,77 @@
+
+<div class="container-fluid dashboard-content">
+    <!-- ============================================================== -->
+    <!-- pageheader -->
+    <!-- ============================================================== -->
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+          <h2 class="pageheader-title">Start New Campaign</h2>
+          <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+          <div class="page-breadcrumb">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Campaigns</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Start New Campaign</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end pageheader -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- new campaign form -->
+    <!-- ============================================================== -->
+    <div class="row mt-5">
+      <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12" style="float: none; margin: 0 auto;">
+        <div class="card">
+          <h5 class="card-header">Campaign Details</h5>
+          <div class="card-body">
+            
+            <div class="form-group row">
+              <label for="campname" class="col-12 col-sm-3 col-form-label text-sm-right">Campaign Name</label>
+              <div class="col-12 col-sm-8 col-lg-6">
+                <input id="campname" name="campname" type="text" placeholder="" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="cmpto" class="col-12 col-sm-3 col-form-label text-sm-right">To</label>
+              <div class="col-12 col-sm-8 col-lg-6">
+                <select id="single" name="listid" class="js-example-basic-multiple">
+                  <option data-placeholder="true">Select a List</option>
+                  <option  value="'.$row['listID'].'">'.$row['name'].'</option>
+                  <option disabled>There is no lists</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="strtdte" class="col-12 col-sm-3 col-form-label text-sm-right">Start Date</label>
+              <div class="col-12 col-sm-8 col-lg-6">
+                <input type='text' name="strtdate" id='strtdte' class="form-control" data-time-format='hh:ii'
+                data-date-format="yyyy/mm/dd" readonly="true" style="background-color: #ffffff;" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xl-6 col-12 text-center" style="float: none; margin: 0 auto;">
+                <div id="alert"></div>
+              </div>
+              <div class="col-12 text-center">
+                <div id="preloader" class="hide" style="position: relative;display: inline-flex;">
+                  <div class="loader"></div>
+                </div>
+                <button id="ltsgo" class="btn btn-primary">Lets Go!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end new campaign form -->
+    <!-- ============================================================== -->
+  </div>

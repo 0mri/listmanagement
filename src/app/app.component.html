@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="dashboard-main-wrapper">
+  <app-nav></app-nav>
+  <app-sidebar></app-sidebar>
+  <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" class="dashboard-wrapper">
+      <router-outlet #o="outlet"></router-outlet>
+  </div>
+</div>

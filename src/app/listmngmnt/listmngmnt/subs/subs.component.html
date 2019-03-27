@@ -1,0 +1,67 @@
+<div class="card">
+  
+    <div class="card-header d-flex">
+      <h4 class="card-header-title">Subscribers</h4>
+      <div *ngIf="err.status" style=" position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      opacity: .95;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      overflow: hidden;"><span>{{err.msg}}</span></div>
+      <div class="toolbar ml-auto">
+        <small class="mr-sm-1"><span id="strt"></span>-<span id="end"></span> of <span
+            id="subsNum"></span></small>
+        <button href="#" id="leftData" class="btn btn-light btn-sm"><i class="fas fa-angle-left"></i></button>
+        <button href="#" id="rightData" class="btn btn-light btn-sm"><i class="fas fa-angle-right"></i></button>
+      </div>
+    </div>
+    <div class=" card-body p-0">
+        
+      <div class="table-responsive">
+
+        <table class="table table-hover">
+          <thead class="bg-light">
+            <tr class="border-0">
+              <th class="border-0">#</th>
+              <th class="border-0">E-mail</th>
+              <th class="border-0">Source</th>
+              <th class="border-0">Date</th>
+              <th class="border-0">Delete</th>
+
+            </tr>
+          </thead>
+          <tbody>
+              <app-loading-spinner *ngIf="showSpinner && !err.status"></app-loading-spinner>
+              
+            <tr *ngFor="let sub of subs; index as i">
+              <th scope="row">{{ i+1 }}</th>
+              <td>{{ sub.email }}</td>
+              <td>{{ sub.src }}</td>
+              <td>{{ sub.date }}</td>
+              <td>
+                <label class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" value="' + value.email + '" name="check"
+                    class="custom-control-input" /><span class="custom-control-label"></span></label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-footer">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addEmail">Add</button>
+          <button id="warnbtn" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
